@@ -1,40 +1,65 @@
 # GitHub README Chess Tournament
 
-This template repository contains the source code for a Python Chess bot, together with GitHub Workflows in order to allow ANYONE to play chess from a README file. Want to see this in action? Go to my [profile page](https://github.com/marcizhu) and feel free to try it out by yourself!
+This is an open chess tournament where ANYONE can play. That's the fun part.  
+It's your turn to play! Move a <!-- BEGIN TURN -->white<!-- END TURN --> piece.
+
+<!-- BEGIN CHESS BOARD -->
+|   | A | B | C | D | E | F | G | H |   |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **8** | <img src="img/black/rook.png" width=50px> | <img src="img/black/knight.png" width=50px> | <img src="img/black/bishop.png" width=50px> | <img src="img/black/queen.png" width=50px> | <img src="img/black/king.png" width=50px> | <img src="img/black/bishop.png" width=50px> | <img src="img/black/knight.png" width=50px> | <img src="img/black/rook.png" width=50px> | **8** |
+| **7** | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | **7** |
+| **6** | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | **6** |
+| **5** | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | **5** |
+| **4** | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | **4** |
+| **3** | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | **3** |
+| **2** | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | **2** |
+| **1** | <img src="img/white/rook.png" width=50px> | <img src="img/white/knight.png" width=50px> | <img src="img/white/bishop.png" width=50px> | <img src="img/white/queen.png" width=50px> | <img src="img/white/king.png" width=50px> | <img src="img/white/bishop.png" width=50px> | <img src="img/white/knight.png" width=50px> | <img src="img/white/rook.png" width=50px> | **1** |
+|   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |
+<!-- END CHESS BOARD -->
+
+**It's your turn to move! Choose one from the following table**
+<!-- BEGIN MOVES LIST -->
+|  FROM  | TO (Just click a link!) |
+| :----: | :---------------------- |
+| **A2** | [A3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+A2+to+A3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [A4](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+A2+to+A4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **B1** | [A3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+B1+to+A3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [C3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+B1+to+C3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **B2** | [B3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+B2+to+B3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [B4](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+B2+to+B4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **C2** | [C3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+C2+to+C3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [C4](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+C2+to+C4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **D2** | [D3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+D2+to+D3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D4](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+D2+to+D4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **E2** | [E3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+E2+to+E3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E4](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+E2+to+E4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **F2** | [F3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+F2+to+F3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [F4](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+F2+to+F4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **G1** | [F3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+G1+to+F3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [H3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+G1+to+H3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **G2** | [G3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+G2+to+G3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [G4](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+G2+to+G4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **H2** | [H3](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+H2+to+H3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [H4](https://github.com/marcizhu/readme-chess/issues/new?title=Chess%3A+Move+H2+to+H4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+<!-- END MOVES LIST -->
+
+Having fun? Ask a friend to do the next move!
+
+#### How it works
+
+When you click on a link and submit a new issue with the desired move, a GitHub action is triggered, which in turn runs a small python script that performs the specified movement, updates this README file and commits the changes.
+
+Have you spotted a bug? Something missing? Feel free to open an [issue](https://github.com/marcizhu/readme-chess/issues) and I will try to fix it as soon as possible :D
 
 
-## Steps to make your own repo
+<details>
+  <summary>Last 5 moves in this game</summary>
+  <!-- BEGIN LAST MOVES -->
 
-1. First, create a new repository based on this template. Call it whatever you want!
+| Move | Author |
+| :--: | :----- |
+| `Start game` | [ @marcizhu](https://github.com/marcizhu) |
 
-2. Tweak the bot settings to your linking. These settings are located in the file `src/tweaks.py`. Specially, make sure to update the following parameters:
-    - `GITHUB_USER`: Your GitHub username
-    - `GITHUB_REPO_NAME`: Name of your newly created GitHub repository
-    
-    The rest of the settings are optional and can be changed to your liking, but leaving them as they are is more than enough.
+<!-- END LAST MOVES -->
+</details>
 
-3. Rename the folder `.github/_workflows` to `.github/workflows` in order to enable the GitHub Actions workflow that does all the magic.
+<details>
+  <summary>Top 10 moves across all games</summary>
+  <!-- BEGIN TOP MOVES -->
 
-4. Delete this README file and make your own `README.md`. I recommend using `README.template` as a starting point. Keep in mind that the text between the HTML comments like `<-- BEGIN CHESS BOARD -->` and `<-- END CHESS BOARD -->` will be recreated after each move, so don't waste your time changing anything in there ;)
+| Total moves |  User  |
+| :---------: | :----- |
 
-5. Commit and push all the settings and create a new issue with title `Chess: Start new game`. If all goes well, after a few seconds a new response should appear telling you that a new game was successfully started and the issue should be automatically closed. Then, a new commit should appear and your repository should be ready to go! Just click on any of the links on the table of available moves, click on "Submit new issue" and after a few seconds, the move should be performed!
+<!-- END TOP MOVES -->
+</details>
 
-Don't forget to share, have fun and enjoy your games!
-
-
-## Some extra information
-
-All games are automatically archived into the `games/` folder. The current game is always called `games/current.pgn`, and the archived games always follow the pattern `games/game-yyyymmdd-HHMMSS.pgn`. You can download the archived games and review them using an external application. Each move in that PGN file has a comment specifying who performed each move so you can see which moves you made!
-
-Finally, this is my first project using Python, so don't be too harsh on my coding skills. If you find any problem, feel free to submit an issue or open a PR and I will be more than happy to take a look at it!
-
-
-## Credits
-
-Thanks to @timburgan for the initial idea. This project is heavily inspired on his. Also, big thanks to the authors and contributors of [python-chess](https://python-chess.readthedocs.io/en/latest/), [PyGithub](https://pygithub.readthedocs.io/en/latest/) and [EndBug/add-and-commit](https://github.com/EndBug/add-and-commit). Without their libraries, this project would have been impossible :heart:
-
-
-## License
-
-This template and the code in it is licensed under the [MIT License](https://github.com/marcizhu/readme-chess/LICENSE).  
-If you use this on your own repositories, please add a link back to this repo :D

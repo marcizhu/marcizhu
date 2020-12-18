@@ -1,8 +1,8 @@
 from urllib.parse import urlencode
 
 
-GITHUB_USER      = "marcizhu"      # GitHub user where this file is located
-GITHUB_REPO_NAME = "readme-chess"  # GitHub repo for this project
+GITHUB_USER      = "marcizhu" # GitHub user where this file is located
+GITHUB_REPO_NAME = "marcizhu" # GitHub repo for this project
 
 # Contents of the issue to create as a template
 GITHUB_MOVE_ISSUE_CONTENTS = {
