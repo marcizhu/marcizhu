@@ -1,0 +1,45 @@
+name: Chess
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  move:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.issue.title, 'Chess:')
+
+    steps:
+      # Set up environment variables
+      - name: Setting up environment
+        run: |
+          echo "ISSUE_NUMBER=${{ github.event.issue.number }}" >> $GITHUB_ENV
+          echo "GH_ACCESS_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
+
+      - uses: actions/checkout@v2
+
+      # Set up a Python 3.8 (64-bit) instance
+      - name: Setting up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+          architecture: "x64"
+
+      # Use pip to install the dependencies and then run the script
+      - name: Play chess
+        run: |
+          pip install -r requirements.txt
+          python main.py
+
+      # Create new commit with the changed files and push it to GitHub
+      - uses: EndBug/add-and-commit@v5
+        with:
+          add: '.'
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: '@${{ github.event.issue.user.login }} move chess'
+          push: true
+
+        env:
+          # This is necessary in order to push a commit to the repo
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
