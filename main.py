@@ -16,8 +16,6 @@ import src.markdown as markdown
 # TODO:
 # - Try to promote to queen if possible
 # - Use an image instead of a raw link to start new games
-# - Cleanup, turn this repo into a template. Add info about how to set it up and open source it
-# - Move contents to marcizhu/marcizhu
 
 class Action(Enum):
 	UNKNOWN = 0
