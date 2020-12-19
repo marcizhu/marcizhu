@@ -61,7 +61,7 @@ Have you spotted a bug? Something missing? Feel free to open an [issue](https://
 </details>
 
 <details>
-  <summary>Top 10 moves across all games</summary>
+  <summary>Top 10 most moves across all games</summary>
   <!-- BEGIN TOP MOVES -->
 
 | Total moves |  User  |
@@ -74,4 +74,3 @@ Have you spotted a bug? Something missing? Feel free to open an [issue](https://
 
 <!-- END TOP MOVES -->
 </details>
-
