@@ -1,8 +1,5 @@
+import os
 from urllib.parse import urlencode
-
-
-GITHUB_USER      = "marcizhu" # GitHub user where this file is located
-GITHUB_REPO_NAME = "marcizhu" # GitHub repo for this project
 
 # Contents of the issue to create as a template
 GITHUB_MOVE_ISSUE_CONTENTS = {
@@ -16,10 +13,10 @@ GITHUB_NEW_GAME_ISSUE_CONTENTS = {
 }
 
 # Link of the move issue
-GITHUB_MOVE_ISSUE_LINK = "https://github.com/" + GITHUB_USER + "/" + GITHUB_REPO_NAME + "/issues/new?" + urlencode(GITHUB_MOVE_ISSUE_CONTENTS, safe="{}")
+GITHUB_MOVE_ISSUE_LINK = "https://github.com/" + os.environ["GITHUB_REPOSITORY"] + "/issues/new?" + urlencode(GITHUB_MOVE_ISSUE_CONTENTS, safe="{}")
 
 # Link of the new game issue
-GITHUB_NEW_GAME_ISSUE_LINK = "https://github.com/" + GITHUB_USER + "/" + GITHUB_REPO_NAME + "/issues/new?" + urlencode(GITHUB_NEW_GAME_ISSUE_CONTENTS)
+GITHUB_NEW_GAME_ISSUE_LINK = "https://github.com/" + os.environ["GITHUB_REPOSITORY"] + "/issues/new?" + urlencode(GITHUB_NEW_GAME_ISSUE_CONTENTS)
 
 MAX_LAST_MOVERS = 5 # Maximum moves to display
 MAX_TOP_MOVERS = 10 # Top most moves to display
@@ -65,4 +62,4 @@ COMMENT_SUCCESSFUL_NEW_GAME="{author} done! New game successfully started!"
 COMMENT_UNKNOWN_COMMAND="{author} Sorry, I can't understand the command. Please try again and do not modify the issue title!"
 
 # Comment for game overs
-COMMENT_GAME_OVER="And that's a game over! {winner}! This game had {num_moves} moves made by {num_players}.\n\nThanks to {players} for participating!"
+COMMENT_GAME_OVER="And that's a game over! {outcome}! This game had {num_moves} moves made by {num_players} players.\n\nThanks to {players} for participating!"

@@ -44,11 +44,6 @@ def update_last_moves(line):
 		f.write(line.rstrip('\r\n') + '\n' + content)
 
 
-def update_player_list(player):
-	with open("data/players.txt", "a+") as f:
-		f.write(player + "\n")
-
-
 def replaceTextBetween(originalText, delimeterA, delimterB, replacementText):
 	if originalText.find(delimeterA) == -1 or originalText.find(delimterB) == -1:
 		return originalText
@@ -73,8 +68,8 @@ def parse_issue(title):
 
 
 def main():
-	g = Github(os.environ["GH_ACCESS_TOKEN"])
-	repo = g.get_repo(tweaks.GITHUB_USER + "/" + tweaks.GITHUB_REPO_NAME)
+	g = Github(os.environ["GITHUB_TOKEN"])
+	repo = g.get_repo(os.environ["GITHUB_REPOSITORY"])
 	issue = repo.get_issue(number=int(os.environ["ISSUE_NUMBER"]))
 
 	issue_title  = issue.title
@@ -84,7 +79,7 @@ def main():
 	gameboard = chess.Board()
 
 	if action[0] == Action.NEW_GAME:
-		if os.path.exists("games/current.pgn") and issue_author != "@" + tweaks.GITHUB_USER:
+		if os.path.exists("games/current.pgn") and issue_author != "@" + os.environ["REPOSITORY_OWNER"]:
 			issue.create_comment(tweaks.COMMENT_INVALID_NEW_GAME.format(author=issue_author))
 			issue.edit(state='closed')
 			sys.exit("ERROR: A current game is in progress. Only the repo owner can start a new issue")
@@ -98,8 +93,8 @@ def main():
 
 		# Create new game
 		game = chess.pgn.Game()
-		game.headers["Event"] = tweaks.GITHUB_USER + "'s Online Open Chess Tournament"
-		game.headers["Site"] = "https://github.com/" + tweaks.GITHUB_USER + "/" + tweaks.GITHUB_REPO_NAME
+		game.headers["Event"] = os.environ["REPOSITORY_OWNER"] + "'s Online Open Chess Tournament"
+		game.headers["Site"] = "https://github.com/" + os.environ["GITHUB_REPOSITORY"]
 		game.headers["Date"] = datetime.now().strftime("%Y.%m.%d")
 		game.headers["Round"] = "1"
 
@@ -137,7 +132,6 @@ def main():
 
 		update_last_moves(action[1] + ": " + issue_author)
 		update_top_moves(issue_author)
-		update_player_list(issue_author)
 
 		# Perform move
 		gameboard.push(move)
@@ -168,14 +162,15 @@ def main():
 		elif winner == "0-1":
 			win_msg = "Black wins"
 
-		with open("data/players.txt", "r") as f:
-			lines = [x.strip() for x in f.readlines()]
-			players = ", ".join(set(lines))
+		with open("data/last_moves.txt", "r") as f:
+			lines = f.readlines()
+			pattern = re.compile('.*: (@[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38})', flags=re.I)
+			player_list = [re.match(pattern, line).group(1) for line in lines]
+			players = ", ".join(set(player_list))
 
-		issue.create_comment(tweaks.COMMENT_GAME_OVER.format(winner=win_msg, players=players, num_moves=len(lines), num_players=len(players)))
+		issue.create_comment(tweaks.COMMENT_GAME_OVER.format(outcome=win_msg, players=players, num_moves=len(lines), num_players=len(set(player_list))))
 		os.rename("games/current.pgn", datetime.now().strftime("games/game-%Y%m%d-%H%M%S.pgn"))
 		os.remove("data/last_moves.txt")
-		os.remove("data/players.txt")
 
 	with open("README.md", "r") as file:
 		readme = file.read()
