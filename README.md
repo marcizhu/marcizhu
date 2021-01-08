@@ -1,4 +1,4 @@
-# macizhu's README Chess Tournament
+# Marc's Open Chess Tournament
 
 This is an open chess tournament where ANYONE can play. That's the fun part.  
 It's your turn to play! Move a <!-- BEGIN TURN -->black<!-- END TURN --> piece.
