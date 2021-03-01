@@ -72,3 +72,7 @@ Have you spotted a bug? Something missing? Feel free to open an [issue](https://
 
 <!-- END TOP MOVES -->
 </details>
+
+---
+
+Do you want to make your own? Check out my [readme chess template](https://github.com/marcizhu/readme-chess)!
