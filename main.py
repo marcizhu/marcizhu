@@ -14,7 +14,7 @@ import src.tweaks as tweaks
 import src.markdown as markdown
 
 # TODO:
-# - Try to promote to queen if possible
+# - Add issue labels on GitHub
 # - Use an image instead of a raw link to start new games
 
 class Action(Enum):
@@ -110,9 +110,12 @@ def main():
 		for move in game.mainline_moves():
 			gameboard.push(move)
 
+		# Try to move with promotion to queen
+		if chess.Move.from_uci(action[1] + "q") in gameboard.legal_moves:
+			action[1] += "q"
+
 		print("Perform move " + action[1])
 
-		# TODO: Try to move with promotion to queen, fall back to normal move if invalid
 		move = chess.Move.from_uci(action[1])
 
 		# Check if move is valid
