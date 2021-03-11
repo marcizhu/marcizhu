@@ -14,7 +14,6 @@ import src.tweaks as tweaks
 import src.markdown as markdown
 
 # TODO:
-# - Add issue labels on GitHub
 # - Use an image instead of a raw link to start new games
 
 class Action(Enum):
@@ -121,17 +120,20 @@ def main():
 		# Check if move is valid
 		if not move in gameboard.legal_moves:
 			issue.create_comment(tweaks.COMMENT_INVALID_MOVE.format(author=issue_author, move=action[1]))
-			issue.edit(state='closed')
+			issue.edit(state='closed', labels=["Invalid"])
 			sys.exit("ERROR: Move is invalid!")
 
 		# Check if board is valid
 		if not gameboard.is_valid():
 			issue.create_comment(tweaks.COMMENT_INVALID_BOARD.format(author=issue_author))
-			issue.edit(state='closed')
+			issue.edit(state='closed', labels=["Invalid"])
 			sys.exit("ERROR: Board is invalid!")
+
+		issue_labels = ["⚔️ Capture!"] if gameboard.is_capture(move) else []
+		issue_labels += ["White" if gameboard.turn == chess.WHITE else "Black"]
 		
 		issue.create_comment(tweaks.COMMENT_SUCCESSFUL_MOVE.format(author=issue_author, move=action[1]))
-		issue.edit(state='closed')
+		issue.edit(state='closed', labels=issue_labels)
 
 		update_last_moves(action[1] + ": " + issue_author)
 		update_top_moves(issue_author)
@@ -143,7 +145,7 @@ def main():
 
 	elif action[0] == Action.UNKNOWN:
 		issue.create_comment(tweaks.COMMENT_UNKNOWN_COMMAND.format(author=issue_author))
-		issue.edit(state='closed')
+		issue.edit(state='closed', labels=["Invalid"])
 		sys.exit("ERROR: Unknown action")
 
 	# Save game to "games/current.pgn"
@@ -171,6 +173,7 @@ def main():
 			player_list = [re.match(pattern, line).group(1) for line in lines]
 			players = ", ".join(set(player_list))
 
+		issue.add_to_labels("👑 Winner!")
 		issue.create_comment(tweaks.COMMENT_GAME_OVER.format(outcome=win_msg, players=players, num_moves=len(lines), num_players=len(set(player_list))))
 		os.rename("games/current.pgn", datetime.now().strftime("games/game-%Y%m%d-%H%M%S.pgn"))
 		os.remove("data/last_moves.txt")
