@@ -38,7 +38,7 @@ jobs:
           add: '.'
           author_name: github-actions[bot]
           author_email: github-actions[bot]@users.noreply.github.com
-          message: '@${{ github.event.issue.user.login }} move chess'
+          message: '${{ github.event.issue.title }} by ${{ github.event.issue.user.login }}'
           push: true
 
         env:
