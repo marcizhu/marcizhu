@@ -1,7 +1,7 @@
 # Marc's Open Chess Tournament
 
 This is an open chess tournament where ANYONE can play. That's the fun part.  
-It's your turn to play! Move a <!-- BEGIN TURN -->white<!-- END TURN --> piece.
+It's your turn to play! Move a <!-- BEGIN TURN -->black<!-- END TURN --> piece.
 
 <!-- BEGIN CHESS BOARD -->
 |   | A | B | C | D | E | F | G | H |   |
@@ -12,18 +12,25 @@ It's your turn to play! Move a <!-- BEGIN TURN -->white<!-- END TURN --> piece.
 | **5** | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | **5** |
 | **4** | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/black/queen.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | **4** |
 | **3** | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/white/knight.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | **3** |
-| **2** | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | **2** |
-| **1** | <img src="img/white/rook.png" width=50px> | <img src="img/white/knight.png" width=50px> | <img src="img/white/bishop.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/white/king.png" width=50px> | <img src="img/white/bishop.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/white/rook.png" width=50px> | **1** |
+| **2** | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/bishop.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | <img src="img/white/pawn.png" width=50px> | **2** |
+| **1** | <img src="img/white/rook.png" width=50px> | <img src="img/white/knight.png" width=50px> | <img src="img/white/bishop.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/white/king.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/white/rook.png" width=50px> | **1** |
 |   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |
 <!-- END CHESS BOARD -->
 
 **It's your turn to move! Choose one from the following table**
 <!-- BEGIN MOVES LIST -->
-**CHECK!** Choose your move wisely!
 |  FROM  | TO (Just click a link!) |
 | :----: | :---------------------- |
-| **E1** | [D1](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E1+to+D1&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
-| **F1** | [E2](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+F1+to+E2&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **A7** | [A5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+A7+to+A5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [A6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+A7+to+A6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **B7** | [B5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+B7+to+B5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [B6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+B7+to+B6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **B8** | [A6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+B8+to+A6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [C6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+B8+to+C6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **C7** | [C5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C7+to+C5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [C6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C7+to+C6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **D7** | [D5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+D7+to+D5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+D7+to+D6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **E4** | [A4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+A4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [B4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+B4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [C2](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+C2&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [C4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+C4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [C6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+C6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D3](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+D3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+D4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+D5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E2](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+E2&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E3](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+E3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+E5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+E6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E7](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+E7&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [F3](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+F3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [F4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+F4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [F5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+F5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [G4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+G4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [H4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E4+to+H4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **E8** | [D8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E8+to+D8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E7](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E8+to+E7&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **F6** | [D5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+F6+to+D5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [G4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+F6+to+G4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [G8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+F6+to+G8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [H5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+F6+to+H5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **G6** | [G5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+G6+to+G5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **H7** | [H5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+H7+to+H5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [H6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+H7+to+H6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
 <!-- END MOVES LIST -->
 
 Having fun? Ask a friend to do the next move!
@@ -41,11 +48,11 @@ Have you spotted a bug? Something missing? Feel free to open an [issue](https://
 
 | Move | Author |
 | :--: | :----- |
+| `F1` to `E2` | [ @TomeuUris](https://github.com/TomeuUris) |
 | `E7` to `E4` | [ @Jurymax99](https://github.com/Jurymax99) |
 | `G1` to `F3` | [ @TomeuUris](https://github.com/TomeuUris) |
 | `G8` to `F6` | [ @Jurymax99](https://github.com/Jurymax99) |
 | `E5` to `H8` | [ @TomeuUris](https://github.com/TomeuUris) |
-| `D8` to `E7` | [ @marcizhu](https://github.com/marcizhu) |
 
 <!-- END LAST MOVES -->
 </details>
@@ -58,7 +65,7 @@ Have you spotted a bug? Something missing? Feel free to open an [issue](https://
 | :---------: | :----- |
 | 50 | [@marcizhu](https://github.com/marcizhu) |
 | 12 | [@LibertyAm](https://github.com/LibertyAm) |
-| 9 | [@TomeuUris](https://github.com/TomeuUris) |
+| 10 | [@TomeuUris](https://github.com/TomeuUris) |
 | 6 | [@JeppeSRC](https://github.com/JeppeSRC) |
 | 6 | [@Jurymax99](https://github.com/Jurymax99) |
 | 3 | [@maximyudayev](https://github.com/maximyudayev) |
