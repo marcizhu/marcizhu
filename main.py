@@ -114,7 +114,9 @@ def main():
 
 		# Try to move with promotion to queen
 		if chess.Move.from_uci(action[1] + "q") in gameboard.legal_moves:
-			action[1] += "q"
+			action = (action[0], action[1] + "q")
+		elif chess.Move.from_uci(action[1] + "Q") in gameboard.legal_moves:
+			action = (action[0], action[1] + "Q")
 
 		print("Perform move " + action[1])
 
