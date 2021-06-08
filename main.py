@@ -106,8 +106,10 @@ def main():
 		game = chess.pgn.read_game(pgn_file)
 		gameboard = game.board()
 
-		last_player = open('data/last_moves.txt').readline().split(':')[1].strip()
-		print(last_player)
+		with open('data/last_moves.txt') as moves:
+			line = moves.readline()
+			last_player = line.split(':')[1].strip()
+			last_move   = line.split(':')[0].strip()
 
 		for move in game.mainline_moves():
 			gameboard.push(move)
@@ -121,7 +123,7 @@ def main():
 		move = chess.Move.from_uci(action[1])
 
 		# Check if player is moving twice in a row
-		if last_player == issue_author:
+		if last_player == issue_author and "Start game" not in last_move:
 			issue.create_comment("Sorry, you can't move twice in a row! You can ask someone to play the next turn :D")
 			issue.edit(state='closed', labels=["Invalid"])
 			sys.exit("ERROR: Two moves in a row!")
