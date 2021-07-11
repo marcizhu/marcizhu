@@ -1,12 +1,12 @@
 # Marc's Open Chess Tournament
 
 This is an open chess tournament where ANYONE can play. That's the fun part.  
-It's your turn to play! Move a <!-- BEGIN TURN -->black<!-- END TURN --> piece.
+It's your turn to play! Move a <!-- BEGIN TURN -->white<!-- END TURN --> piece.
 
 <!-- BEGIN CHESS BOARD -->
 |   | A | B | C | D | E | F | G | H |   |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| **8** | <img src="img/blank.png" width=50px> | <img src="img/black/knight.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/black/rook.png" width=50px> | **8** |
+| **8** | <img src="img/blank.png" width=50px> | <img src="img/black/knight.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/black/rook.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | **8** |
 | **7** | <img src="img/black/pawn.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/white/knight.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | **7** |
 | **6** | <img src="img/blank.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/black/pawn.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/black/king.png" width=50px> | **6** |
 | **5** | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/black/bishop.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/blank.png" width=50px> | <img src="img/white/bishop.png" width=50px> | <img src="img/white/knight.png" width=50px> | <img src="img/blank.png" width=50px> | **5** |
@@ -19,15 +19,14 @@ It's your turn to play! Move a <!-- BEGIN TURN -->black<!-- END TURN --> piece.
 
 **It's your turn to move! Choose one from the following table**
 <!-- BEGIN MOVES LIST -->
+**CHECK!** Choose your move wisely!
 |  FROM  | TO (Just click a link!) |
 | :----: | :---------------------- |
-| **A7** | [A5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+A7+to+A5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [A6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+A7+to+A6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
-| **B6** | [B5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+B6+to+B5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
-| **B8** | [A6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+B8+to+A6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D7](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+B8+to+D7&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
-| **C5** | [A3](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C5+to+A3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [B4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C5+to+B4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C5+to+D4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C5+to+D6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E7](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C5+to+E7&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [F8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C5+to+F8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
-| **G7** | [G6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+G7+to+G6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
-| **H6** | [H5](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+H6+to+H5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
-| **H8** | [C8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+H8+to+C8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [D8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+H8+to+D8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+H8+to+E8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [F8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+H8+to+F8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [G8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+H8+to+G8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **C7** | [E6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C7+to+E6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E8](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+C7+to+E8&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **D2** | [E3](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+D2+to+E3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **E1** | [D1](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E1+to+D1&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [F1](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+E1+to+F1&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **F5** | [E4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+F5+to+E4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+F5+to+E6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
+| **G5** | [E4](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+G5+to+E4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD), [E6](https://github.com/marcizhu/marcizhu/issues/new?title=Chess%3A+Move+G5+to+E6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) |
 <!-- END MOVES LIST -->
 
 Having fun? Ask a friend to do the next move!
@@ -45,11 +44,11 @@ Have you spotted a bug? Something missing? Feel free to open an [issue](https://
 
 | Move | Author |
 | :--: | :----- |
+| `H8` to `E8` | [ @ivangsm](https://github.com/ivangsm) |
 | `D3` to `F5` | [ @marcizhu](https://github.com/marcizhu) |
 | `E7` to `C5` | [ @PolandBOX](https://github.com/PolandBOX) |
 | `D1` to `A1` | [ @marcizhu](https://github.com/marcizhu) |
 | `B2` to `A1` | [ @LeonardoRamirezAndrade](https://github.com/LeonardoRamirezAndrade) |
-| `C4` to `D3` | [ @mishmanners](https://github.com/mishmanners) |
 
 <!-- END LAST MOVES -->
 </details>
