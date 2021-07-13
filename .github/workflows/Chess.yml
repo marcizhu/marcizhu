@@ -33,14 +33,10 @@ jobs:
           python main.py
 
       # Create new commit with the changed files and push it to GitHub
-      - uses: EndBug/add-and-commit@v5
-        with:
-          add: '.'
-          author_name: github-actions[bot]
-          author_email: github-actions[bot]@users.noreply.github.com
-          message: '${{ github.event.issue.title }} by ${{ github.event.issue.user.login }}'
-          push: true
-
-        env:
-          # This is necessary in order to push a commit to the repo
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "${{ github.event.issue.title }} by ${{ github.event.issue.user.login }}"
+          git push
