@@ -375,3 +375,4 @@ moves:
   - author: '@player1'
     move: 'Chess: Move A6 to E6'
     is_capture: true
+    is_draw: true

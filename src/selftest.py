@@ -21,6 +21,10 @@ def get_test_data(settings, move_data, owner, i):
         labels += ['👑 Winner!']
         comments += [settings['comments']['game_over'].format(outcome='.+', num_moves='\\d+', num_players='\\d+', players='(@.+,)* @.+')]
 
+    if 'is_draw' in move_data and move_data['is_draw'] == True:
+        labels += ['👑 Draw!']
+        comments += [settings['comments']['game_over'].format(outcome='.+', num_moves='\\d+', num_players='\\d+', players='(@.+,)* @.+')]
+
     if 'is_capture' in move_data and move_data['is_capture'] == True:
         labels += ['⚔️ Capture!']
 

@@ -845,3 +845,4 @@ moves:
   - author: '@Stockfish'
     move: 'Chess: Move D2 to B1'
     is_capture: true
+    is_draw: true
