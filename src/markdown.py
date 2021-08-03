@@ -16,33 +16,25 @@ def create_link(text, link):
 
 
 def create_issue_link(source, dest_list):
-    ret = []
-
     issue_link = settings['issues']['link'].format(
         repo=os.environ["GITHUB_REPOSITORY"],
         params=urlencode(settings['issues']['move'], safe="{}"))
 
-    for dest in sorted(dest_list):
-        ret.append(create_link(dest, issue_link.format(source=source, dest=dest)))
+    ret = [create_link(dest, issue_link.format(source=source, dest=dest)) for dest in sorted(dest_list)]
 
     return ", ".join(ret)
 
 
 def generate_top_moves():
     with open("data/top_moves.txt", 'r') as file:
-        contents = file.read()
-        dictionary = ast.literal_eval(contents)
+        dictionary = ast.literal_eval(file.read())
 
     markdown = "\n"
     markdown += "| Total moves |  User  |\n"
     markdown += "| :---------: | :----- |\n"
 
-    counter = 0
-    for key,val in sorted(dictionary.items(), key=lambda x: x[1], reverse=True):
-        if counter >= settings['misc']['max_top_moves']:
-            break
-
-        counter += 1
+    max_entries = settings['misc']['max_top_moves']
+    for key,val in sorted(dictionary.items(), key=lambda x: x[1], reverse=True)[:max_entries]:
         markdown += "| " + str(val) + " | " + create_link(key, "https://github.com/" + key[1:]) + " |\n"
 
     return markdown + "\n"
@@ -81,10 +73,9 @@ def generate_last_moves():
 
 def generate_moves_list(board):
     # Create dictionary and fill it
-    moves = list(board.legal_moves)
     moves_dict = defaultdict(set)
 
-    for move in moves:
+    for move in list(board.legal_moves):
         source = chess.SQUARE_NAMES[move.from_square].upper()
         dest   = chess.SQUARE_NAMES[move.to_square].upper()
 
@@ -92,11 +83,12 @@ def generate_moves_list(board):
 
     # Write everything in Markdown format
     markdown = ""
-    issue_link = settings['issues']['link'].format(
-        repo=os.environ["GITHUB_REPOSITORY"],
-        params=urlencode(settings['issues']['new_game']))
 
     if board.is_game_over():
+        issue_link = settings['issues']['link'].format(
+            repo=os.environ["GITHUB_REPOSITORY"],
+            params=urlencode(settings['issues']['new_game']))
+
         return "**GAME IS OVER!** " + create_link("Click here", issue_link) + " to start a new game :D\n"
 
     if board.is_check():
@@ -111,21 +103,11 @@ def generate_moves_list(board):
     return markdown
 
 
-def board_to_list(board):
-    board_list = []
+def board_to_markdown(board):
+    board_list = [[item for item in line.split(' ')] for line in str(board).split('\n')]
+    markdown = ""
 
-    for line in board.split('\n'):
-        sublist = []
-        for item in line.split(' '):
-            sublist.append(item)
-
-        board_list.append(sublist)
-
-    return board_list
-
-
-def get_image_link(piece):
-    switcher = {
+    images = {
         "r": "img/black/rook.png",
         "n": "img/black/knight.png",
         "b": "img/black/bishop.png",
@@ -143,13 +125,6 @@ def get_image_link(piece):
         ".": "img/blank.png"
     }
 
-    return switcher.get(piece, "???")
-
-
-def board_to_markdown(board):
-    board_list = board_to_list(str(board))
-    markdown = ""
-
     # Write header in Markdown format
     markdown += "|   | A | B | C | D | E | F | G | H |   |\n"
     markdown += "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n"
@@ -158,7 +133,7 @@ def board_to_markdown(board):
     for row in range(1, 9):
         markdown += "| **" + str(9 - row) + "** | "
         for elem in board_list[row - 1]:
-            markdown += "<img src=\"{}\" width=50px> | ".format(get_image_link(elem))
+            markdown += "<img src=\"{}\" width=50px> | ".format(images.get(elem, "???"))
 
         markdown += "**" + str(9 - row) + "** |\n"
 

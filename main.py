@@ -174,8 +174,8 @@ def main(issue, issue_author, repo_owner):
             '0-1': 'Black wins'
         }
 
-        with open('data/last_moves.txt', 'r') as last_moves:
-            lines = last_moves.readlines()
+        with open('data/last_moves.txt', 'r') as last_moves_file:
+            lines = last_moves_file.readlines()
             pattern = re.compile('.*: (@[a-z\\d](?:[a-z\\d]|-(?=[a-z\\d])){0,38})', flags=re.I)
             player_list = { re.match(pattern, line).group(1) for line in lines }
 
@@ -222,4 +222,4 @@ if __name__ == '__main__':
     ret, reason = main(issue, issue_author, repo_owner)
 
     if ret == False:
-        sys.exit(reason)
+        sys.exit(reson)
