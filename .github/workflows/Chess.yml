@@ -13,9 +13,9 @@ jobs:
       # Set up environment variables
       - name: Setting up environment
         run: |
-          echo "ISSUE_NUMBER=${{ github.event.issue.number }}" >> $GITHUB_ENV
-          echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
-          echo "REPOSITORY_OWNER=${{ github.repository_owner }}" >> $GITHUB_ENV
+          echo ISSUE_NUMBER="${{ github.event.issue.number }}" >> $GITHUB_ENV
+          echo GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
+          echo REPOSITORY_OWNER="${{ github.repository_owner }}" >> $GITHUB_ENV
 
       - uses: actions/checkout@v2
 
@@ -34,9 +34,11 @@ jobs:
 
       # Create new commit with the changed files and push it to GitHub
       - name: Commit and push changes
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "${{ github.event.issue.title }} by ${{ github.event.issue.user.login }}"
+          git commit -m "${ISSUE_TITLE} by ${{ github.event.issue.user.login }}"
           git push
