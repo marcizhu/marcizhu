@@ -1,0 +1,32 @@
+name: Webhook
+
+on: push
+
+jobs:
+  webhook:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pusher.email == 'github-actions[bot]@users.noreply.github.com' }}
+
+    steps:
+      # Set up environment variables
+      - name: Install Stockfish
+        run: |
+          sudo apt-get install stockfish
+          echo STOCKFISH_PATH="$(which stockfish)" >> $GITHUB_ENV
+
+      - uses: actions/checkout@v2
+
+      # Set up a Python 3.8 (64-bit) instance
+      - name: Setting up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+          architecture: "x64"
+
+      # Use pip to install the dependencies and then run the script
+      - name: Run webhook
+        env:
+          WEBHOOK_URL=${{ secrets.WEBHOOK_URL }}
+        run: |
+          pip install -r requirements-webhook.txt
+          python webhook.py
