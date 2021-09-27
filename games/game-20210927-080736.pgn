@@ -1,0 +1,10 @@
+[Event "@marcizhu's Online Open Chess Tournament"]
+[Site "https://github.com/marcizhu/marcizhu"]
+[Date "2021.09.24"]
+[Round "1"]
+[White "?"]
+[Black "?"]
+[Result "1-0"]
+
+1. e4 { @KubaRocks } 1... c5 { @marcizhu } 2. Nf3 { @KubaRocks } 2... Nf6 { @mishmanners } 3. Bc4 { @marcizhu } 3... Nxe4 { @mishmanners } 4. Ne5 { @marcizhu } 4... d6 { @mishmanners } 5. Bxf7# { @marcizhu } 1-0
+
