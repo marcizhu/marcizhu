@@ -11,13 +11,6 @@ jobs:
     if: startsWith(github.event.issue.title, 'Chess:')
 
     steps:
-      # Set up environment variables
-      - name: Setting up environment
-        run: |
-          echo ISSUE_NUMBER="${{ github.event.issue.number }}" >> $GITHUB_ENV
-          echo GITHUB_TOKEN="${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
-          echo REPOSITORY_OWNER="${{ github.repository_owner }}" >> $GITHUB_ENV
-
       - uses: actions/checkout@v2
 
       # Set up a Python 3.8 (64-bit) instance
@@ -29,6 +22,10 @@ jobs:
 
       # Use pip to install the dependencies and then run the script
       - name: Play chess
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: |
           pip install -r requirements.txt
           python main.py
@@ -46,7 +43,8 @@ jobs:
 
       - name: Install stockfish
         run: |
-          sudo apt-get install stockfish
+          sudo apt-get update
+          sudo apt-get install -y stockfish
           echo STOCKFISH_PATH="$(which stockfish)" >> $GITHUB_ENV
 
       - name: Run webhook
