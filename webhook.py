@@ -32,7 +32,7 @@ def generate_png(svg):
 
 def move_to_san(board, move):
     if move is None:
-        return None
+        return "None"
 
     return str(board.fullmove_number) + ('... ' if board.turn == chess.BLACK else '. ') + board.san(move)
 
