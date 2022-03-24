@@ -48,7 +48,7 @@ def get_evaluation(board, time_limit):
     score = score.score()
 
     if mate is not None:
-        return 'M{:+d}'.format(mate), next_move
+        return '#{:+d}'.format(mate), next_move
     else:
         return '{:+.2f}'.format(score / 100), next_move
 
@@ -67,9 +67,18 @@ def send_webhook(png, last_move, pts, move):
     webhook.add_embed(embed)
     webhook.execute()
 
+def style_lightblue():
+    colors = dict()
+    colors['square light'] = '#D6DCE0'
+    colors['square dark'] = '#7A909D'
+    colors['square light lastmove'] = '#B7D288'
+    colors['square dark lastmove'] = '#82A465'
+    return colors
+
 board = load_board(get_last_modified('games'))
 check_pos = board.king(board.turn) if board.is_check() else None
-svg = chess.svg.board(board=board, lastmove=board.peek() if len(board.move_stack) > 0 else None, check=check_pos, size=900)
+lastmove = board.peek() if len(board.move_stack) > 0 else None
+svg = chess.svg.board(board=board, lastmove=lastmove, check=check_pos, size=900, colors=style_lightblue())
 png = generate_png(svg)
 
 pts, move = get_evaluation(board, 10.0)
