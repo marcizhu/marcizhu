@@ -52,7 +52,7 @@ def get_evaluation(board, time_limit):
     else:
         return '{:+.2f}'.format(score / 100), next_move
 
-def send_webhook(png, last_move, pts, move):
+def send_webhook(png, last_move, pts, move, board):
     webhook_url = os.environ['WEBHOOK_URL']
     webhook = DiscordWebhook(url=webhook_url, username='README Chess', avatar_url='https://github.com/ChessCom.png')
     webhook.add_file(file=png.read(), filename='image.png')
@@ -84,10 +84,10 @@ png = generate_png(svg)
 pts, move = get_evaluation(board, 10.0)
 
 if len(board.move_stack) == 0:
-    send_webhook(png, 'Start new game', pts, move)
+    send_webhook(png, 'Start new game', pts, move, board)
 else:
     last_move = board.peek();
     board.pop()
 
     last_move = move_to_san(board, last_move)
-    send_webhook(png, last_move, pts, move)
+    send_webhook(png, last_move, pts, move, board)
