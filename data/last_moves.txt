@@ -1,3 +1,4 @@
+g1g2: @sideedgetech
 g3g2: @SubGplayz
 e1g1: @mishmanners
 c5e6: @zYxDevs
