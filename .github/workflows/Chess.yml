@@ -11,13 +11,13 @@ jobs:
     if: startsWith(github.event.issue.title, 'Chess:')
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Set up a Python 3.8 (64-bit) instance
       - name: Setting up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: "3.10"
           architecture: "x64"
 
       # Use pip to install the dependencies and then run the script
