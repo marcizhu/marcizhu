@@ -12,8 +12,7 @@ with open('data/settings.yaml', 'r') as settings_file:
 
 
 def create_link(text, link):
-    return "[" + text + "](" + link + ")"
-
+    return f"[{text}]({link})"
 
 def create_issue_link(source, dest_list):
     issue_link = settings['issues']['link'].format(
@@ -21,9 +20,7 @@ def create_issue_link(source, dest_list):
         params=urlencode(settings['issues']['move'], safe="{}"))
 
     ret = [create_link(dest, issue_link.format(source=source, dest=dest)) for dest in sorted(dest_list)]
-
     return ", ".join(ret)
-
 
 def generate_top_moves():
     with open("data/top_moves.txt", 'r') as file:
@@ -35,10 +32,9 @@ def generate_top_moves():
 
     max_entries = settings['misc']['max_top_moves']
     for key,val in sorted(dictionary.items(), key=lambda x: x[1], reverse=True)[:max_entries]:
-        markdown += "| " + str(val) + " | " + create_link(key, "https://github.com/" + key[1:]) + " |\n"
+        markdown += "| {} | {} |\n".format(val, create_link(key, "https://github.com/" + key[1:]))
 
     return markdown + "\n"
-
 
 def generate_last_moves():
     markdown = "\n"
@@ -70,12 +66,11 @@ def generate_last_moves():
 
     return markdown + "\n"
 
-
 def generate_moves_list(board):
     # Create dictionary and fill it
     moves_dict = defaultdict(set)
 
-    for move in list(board.legal_moves):
+    for move in board.legal_moves:
         source = chess.SQUARE_NAMES[move.from_square].upper()
         dest   = chess.SQUARE_NAMES[move.to_square].upper()
 
@@ -101,7 +96,6 @@ def generate_moves_list(board):
         markdown += "| **" + source + "** | " + create_issue_link(source, dest) + " |\n"
 
     return markdown
-
 
 def board_to_markdown(board):
     board_list = [[item for item in line.split(' ')] for line in str(board).split('\n')]
@@ -129,8 +123,16 @@ def board_to_markdown(board):
     markdown += "|   | A | B | C | D | E | F | G | H |   |\n"
     markdown += "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n"
 
+    # Check if it's Black's turn
+    is_black_turn = board.turn == chess.BLACK
+
+    #Get Rows
+    rows = range(1, 9)
+    if is_black_turn:
+        rows = reversed(rows)
+    
     # Write board
-    for row in range(1, 9):
+    for row in rows:
         markdown += "| **" + str(9 - row) + "** | "
         for elem in board_list[row - 1]:
             markdown += "<img src=\"{}\" width=50px> | ".format(images.get(elem, "???"))
