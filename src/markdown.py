@@ -120,26 +120,33 @@ def board_to_markdown(board):
     }
 
     # Write header in Markdown format
-    markdown += "|   | A | B | C | D | E | F | G | H |   |\n"
+    if board.turn == chess.BLACK:
+        markdown += "|   | H | G | F | E | D | C | B | A |   |\n"
+    else:
+        markdown += "|   | A | B | C | D | E | F | G | H |   |\n"
     markdown += "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n"
 
-    # Check if it's Black's turn
-    is_black_turn = board.turn == chess.BLACK
-
-    #Get Rows
+    # Get Rows
     rows = range(1, 9)
-    if is_black_turn:
+    if board.turn == chess.BLACK:
         rows = reversed(rows)
     
     # Write board
     for row in rows:
         markdown += "| **" + str(9 - row) + "** | "
-        for elem in board_list[row - 1]:
+        columns = board_list[row - 1]
+        if board.turn == chess.BLACK:
+            columns = reversed(columns)
+
+        for elem in columns:
             markdown += "<img src=\"{}\" width=50px> | ".format(images.get(elem, "???"))
 
         markdown += "**" + str(9 - row) + "** |\n"
 
     # Write footer in Markdown format
-    markdown += "|   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |\n"
+    if board.turn == chess.BLACK:
+        markdown += "|   | **H** | **G** | **F** | **E** | **D** | **C** | **B** | **A** |   |\n"
+    else:
+        markdown += "|   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |\n"
 
     return markdown
