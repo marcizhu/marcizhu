@@ -102,19 +102,19 @@ def board_to_markdown(board):
     markdown = ""
 
     images = {
-        "r": "img/black/rook.png",
-        "n": "img/black/knight.png",
-        "b": "img/black/bishop.png",
-        "q": "img/black/queen.png",
-        "k": "img/black/king.png",
-        "p": "img/black/pawn.png",
+        "r": "img/black/rook.svg",
+        "n": "img/black/knight.svg",
+        "b": "img/black/bishop.svg",
+        "q": "img/black/queen.svg",
+        "k": "img/black/king.svg",
+        "p": "img/black/pawn.svg",
 
-        "R": "img/white/rook.png",
-        "N": "img/white/knight.png",
-        "B": "img/white/bishop.png",
-        "Q": "img/white/queen.png",
-        "K": "img/white/king.png",
-        "P": "img/white/pawn.png",
+        "R": "img/white/rook.svg",
+        "N": "img/white/knight.svg",
+        "B": "img/white/bishop.svg",
+        "Q": "img/white/queen.svg",
+        "K": "img/white/king.svg",
+        "P": "img/white/pawn.svg",
 
         ".": "img/blank.png"
     }
@@ -130,7 +130,7 @@ def board_to_markdown(board):
     rows = range(1, 9)
     if board.turn == chess.BLACK:
         rows = reversed(rows)
-    
+
     # Write board
     for row in rows:
         markdown += "| **" + str(9 - row) + "** | "
