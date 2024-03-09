@@ -1,3 +1,4 @@
+g7g6: @yellow-forg
 f3f4: @FelixFourcolor
 h5g5: @nk980113
 g2f3: @lulunac27a
