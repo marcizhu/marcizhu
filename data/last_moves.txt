@@ -1,3 +1,4 @@
+e2e4: @garlontas
 c7c6: @dtrinf
 g1f3: @MatissesProjects
 d7d5: @MatthiasGN
