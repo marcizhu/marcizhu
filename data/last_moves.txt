@@ -1,1 +1,2 @@
+g2g3: @Research-Mini
 Start game: @Research-Mini
