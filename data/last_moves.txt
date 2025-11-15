@@ -1,3 +1,4 @@
+h5h6: @1TSnaker
 g2g3: @1TSnakers
 h4h5: @1TSnaker
 h7g7: @1TSnakers
