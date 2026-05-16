@@ -1,3 +1,4 @@
+g7g6: @ETAModder
 g4h5: @MatissesProjects
 g8h6: @Pranav-MSK
 b2b3: @MatissesProjects
