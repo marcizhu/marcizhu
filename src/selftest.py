@@ -4,6 +4,9 @@ import yaml
 
 import src.mockGithub as mockGithub
 
+
+# Builds the expected labels and comments for a single move in the test data
+# depending on what kind of move it is (start, normal, capture, invalid, win, draw, etc.)
 def get_test_data(settings, move_data, owner, i):
     labels = []
     comments = []
@@ -35,6 +38,8 @@ def get_test_data(settings, move_data, owner, i):
     return labels, comments
 
 
+# Runs a single YAML test case file through the provided main function.
+# It goes through every move, checks expected labels/comments, and prints pass/fail results.
 def run_test_case(filename, main_fn):
     passed = 0
     failed = 0
@@ -72,6 +77,8 @@ def run_test_case(filename, main_fn):
     return passed, failed
 
 
+# Finds all test files in the "tests/" folder, runs them one by one,
+# and prints a summary of how many tests passed or failed in total.
 def run(main_fn):
     passed = 0
     failed = 0
@@ -86,4 +93,4 @@ def run(main_fn):
     print()
     print(f'\u001b[1m\u001b[33m    {total} total', end='');
     print(f'\u001b[1m\u001b[32m   {passed} passed', end='');
-    print(f'\u001b[1m\u001b[31m   {failed} failed');
+    print(f'\u001b[1m\u001b[31m   {failed} failed'); 
